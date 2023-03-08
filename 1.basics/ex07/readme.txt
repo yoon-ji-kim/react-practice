@@ -1,0 +1,1 @@
+ex07: ex00.cra Reconfiguration : 직접 설정해서 ex00.cra와 똑같이 생성해보기
