@@ -6,12 +6,12 @@ ex01: Property
 
 ex02: Component Styling  
 ex03: React Event  
-**ex04: State 중요! **
-ex05: Component LifeCycle
-ex06: Immutability(불변성) of Component's State
+__ex04: State *****__  
+ex05: Component LifeCycle  
+ex06: Immutability(불변성) of Component's State  
 
-emaillist07
-guestbook07
-gallery07
-mysite07
-kanbanboard
+emaillist07  
+guestbook07  
+gallery07  
+mysite07  
+kanbanboard  
