@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "@babel/cli": "^7.21.0",
+    "@babel/core": "^7.21.0",
+    "@babel/plugin-transform-block-scoping": "^7.21.0",
+    "@babel/plugin-transform-for-of": "^7.21.0",
+    "@babel/plugin-transform-parameters": "^7.20.7",
+    "@babel/preset-env": "^7.20.2"
+  },
+  "name": "ex03",
+  "description": "3. Env Preset: 변환 규칙 모음\r     1) preset\r         - 여러 플러그인의 변환 규칙을 한 번에 적용하기 위해 관련 플러그인을 모아 놓은 것\r         - 종류\r             1. ECMAScript 년도 별로 모아 놓은 것\r             2. ECMAScript stage(level 0, 1, 2, 3)로 모아 놓은 것\r             3. 3rd party(TypeScript, React)\r             등 다양한 종류가 있음\r         - Env Preset은 ECMAScript stage3 레벨이상의 문법을 모아 놓았다.\r         -",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
