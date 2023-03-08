@@ -11,7 +11,7 @@ ex08: JSX Tutorial
 
 1. 설치 
     1) 개발툴
-        $ npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader sass-loader node-sass @babel/core @babel/cli @babel/preset-env @babel/preset-react
+        $ npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader sass-loader node-sass babel-loader @babel/core @babel/cli @babel/preset-env @babel/preset-react
     2) react library
         $ npm i react react-dom
 2. webpack.config.js 설정

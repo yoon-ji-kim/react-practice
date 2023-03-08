@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = function(env) {
     return {
         mode: "development",
-        entry: path.resolve('src/${env.scr}/index.js'),
+        entry: path.resolve(`src/${env.src}/index.js`),
         output: {
             path: path.resolve('public'),
             filename: 'assets/js/main.js',
@@ -13,7 +13,7 @@ module.exports = function(env) {
             rules:[{
                 test: /\.js$/i,
                 exclude: /node_modules/,
-                use: 'babel-loarder'
+                use: 'babel-loader'
             },{
                 test: /\.(c|sa|sc)ss$/i,
                 use: ['style-loader', 'css-loader', 'sass-loader']

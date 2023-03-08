@@ -2,7 +2,7 @@ ex06: React JSX 기반으로 애플리케이션 리팩토링: babel
 
 1. 설치
     1) 개발툴
-        $ npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader sass-loader node-sass @babel/core @babel/cli @babel/preset-env @babel/preset-react
+        $ npm i -D webpack webpack-cli webpack-dev-server style-loader css-loader sass-loader node-sass babel-loader @babel/core @babel/cli @babel/preset-env @babel/preset-react
     2) react library 
         $ npm i react react-dom  
 

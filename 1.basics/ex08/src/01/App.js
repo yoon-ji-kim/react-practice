@@ -22,6 +22,8 @@ function App() {
       {
         /*
           3. JSX Element의 속성 이름은 DOM API와 일치한다.
+          <h4 class='header' id='title'>타이틀</h4>
+           dcoument.getElementById('title').className = 'header2';
         */
        }
       <h4 className='header' id='title'>타이틀</h4>
