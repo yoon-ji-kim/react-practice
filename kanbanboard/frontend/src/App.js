@@ -1,10 +1,11 @@
 import React from 'react';
+import './assets/css/App.css';
+import KanbanBoard from './KanbanBoard';
 
 function App(props) {
     return (
-        <div id='App'>
-            <h1>Kanbanboard</h1>
-
+        <div id='App' className={'App'}>
+            <KanbanBoard />
         </div>
     );
 }
