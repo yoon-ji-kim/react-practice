@@ -19,6 +19,9 @@ ex02: Component Styling
     - npm run debug src=05 css-modules=true
     
 6) CSS in JS : Styled Component, Less & Styleable
+    - $ npm i styled-components
+   - css-loader options: {modules: true}
+   - $ npm run debug src=06 css-modules=true
 7) React Modal
 8) Modal: Material UI
 =====================================================================================================================================================================================
@@ -34,4 +37,4 @@ $ npm i
 3. babel.config.json 설정
 5. npm 스크립팅
 6. 테스트 서버 실행
-    $ npm run debug src=(01|02|03|04)
+    $ npm run debug src=(01|02|03|04) css-modules=(true|false)
