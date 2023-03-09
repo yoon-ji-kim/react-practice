@@ -3,7 +3,6 @@ import styles from './assets/css/CardList.css';
 import Card from './Card';
 
 const CardList = ({title, cards}) => {
-    console.log(cards);
     return (
         <div className={styles.CardList}>
             <h1>{title}</h1>
@@ -11,7 +10,8 @@ const CardList = ({title, cards}) => {
                 cards.map(card => <Card key={card.no} 
                                         no={card.no} 
                                         title={card.title} 
-                                        description={card.description} />)
+                                        description={card.description} 
+                                        tasks={card.tasks} />)
             }
         </div>
     );
