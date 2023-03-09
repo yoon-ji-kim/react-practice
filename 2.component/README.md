@@ -1,8 +1,8 @@
 React Practice - Component
 
 ex01: Property  
--   1. Component 작성법  
--   2. Data Flow: Top -> Down  
+-    Component 작성법  
+-    Data Flow: Top -> Down  
 
 ex02: Component Styling  
 ex03: React Event  
