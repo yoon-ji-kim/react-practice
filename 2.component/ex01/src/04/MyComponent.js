@@ -55,8 +55,8 @@ MyComponent.propTypes = {
 
     //Combined with javascipt data type
     props07: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired, //number나 string 둘 중 하나
-    props08: PropTypes.arrayOf([PropTypes.bool]).isRequired,                       //boolean 배열이여야함
-    props08: PropTypes.shape({
+    props08: PropTypes.arrayOf(PropTypes.bool).isRequired,                       //boolean 배열이여야함
+    props09: PropTypes.shape({
         no: PropTypes.number.isRequired,
         name: PropTypes.string.isRequired,
         email: PropTypes.string.isRequired

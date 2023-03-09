@@ -1,7 +1,7 @@
 import React from 'react';
 import MyComponent from './MyComponent';
-function App() {
 
+function App() {
   return (
     <div id="App">
       <MyComponent 
@@ -11,7 +11,7 @@ function App() {
         props05={['hello', 'world','react.js', 'es6']} 
         props06={() => '함수'} 
         props07={'숫자나 string'}
-        props08={[true, false, true, true]}
+        props08={[true, false, true, false]}
         props09={{no:1, name: '둘리', email:'dooly@gmail.com'}} />
     </div>
   );
