@@ -10,7 +10,8 @@ function App(props) {
     //키워드 바꼈을때 searchbar에서
     const notifyKeyWordChanges = function(keyword) {
         //emails 내용 변경 조건=> keyword가 firstname에 있거나!(or) lastname에 있거나 email에 있으면 출력
-        const emails = data.filter(e => e.firstName.indexOf(keyword) !== -1|| e.lastName.indexOf(keyword) !== -1 || e.email.indexOf(keyword) !== -1 );
+        //const emails = data.filter(e => e.firstName.indexOf(keyword) !== -1|| e.lastName.indexOf(keyword) !== -1 || e.email.indexOf(keyword) !== -1 );
+        const emails = data.filter(e => e.firstName.includes(keyword)|| e.lastName.includes(keyword) || e.email.includes(keyword) );
         setEmails(emails);
     }
     return (
