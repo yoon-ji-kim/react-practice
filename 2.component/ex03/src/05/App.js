@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import './assets/scss/App.scss';
+import '../assets/scss/App.scss';
 
 export default function App() {
     const outerRef = useRef(null);
