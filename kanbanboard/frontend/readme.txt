@@ -13,3 +13,6 @@ loader: 'babel-loader',
 devtool: "eval-source-map" 디버그를 위해서 꼭 추가하기
 
 
+npm i react-addons-update
+
+
