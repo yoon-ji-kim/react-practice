@@ -12,7 +12,9 @@ const EmailList = ({emails}) => {
                         {email.firstName+email.lastName}
                         <br/>
                         {email.email}
-                    </li>)
+                        <a href=''></a>
+                    </li>
+                        )
                 }
             </ul>
         </div>
