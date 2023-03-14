@@ -3,18 +3,23 @@ import './assets/scss/App.scss'
 import Clock from './Clock';
 
 export default function App() {
+    let now = new Date();
+    const [hours, setHours] = useState(now.getHours());
+    const [minutes, setMinutes] = useState(now.getMinutes());
+    const [seconds, setSeconds] = useState(now.getSeconds());
     const [ticks, setTicks] = useState(0);
     
     useEffect(() => {
         setInterval(function() {
             //세팅할 거 다 하고, ticks 플러스
-        }, 1000);
+                let now = new Date(); 
+                setHours(now.getHours());
+                setMinutes(now.getMinutes());
+                setSeconds(now.getSeconds());
+                setTicks(ticks+1);
+                console.log(ticks);
+            }, 1000);
     }, [])
-    // <Clock
-    //     message={'ex05: useEffect Hook example'}
-    //     hours={state.hours}
-    //     minutes={state.minutes}
-    //     seconds={state.seconds}/>
     //closer
     return (
         <div>
@@ -24,9 +29,9 @@ export default function App() {
                 null :
                 <Clock
                     message={'ex05: useEffect Hook example'}
-                    hours={'10'}
-                    minutes={'20'}
-                    seconds={'30'}/>
+                    hours={hours}
+                    minutes={minutes}
+                    seconds={seconds}/>
 
             }
             
