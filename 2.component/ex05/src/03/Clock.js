@@ -4,12 +4,7 @@ import './assets/scss/Clock.scss';
 export default class Clock extends Component {
     constructor(props) {
         super(props);
-        this.state = {
-            hours: this.props.hours,
-            minutes : this.props.minutes,
-            seconds : this.props.seconds,
-            session : this.props.seconds
-        }
+        this.state = {};
     }
     
     componentDidMount() {
