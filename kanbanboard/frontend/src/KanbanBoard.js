@@ -8,13 +8,12 @@ const KanbanBoard = () => {
     const [cards, setCards] = useState(data);
 
     const changeTaskDone = function(cardNo, taskNo, done) {
-        //console.log(cardNo, taskNo, done);
         const cardIndex = cards.findIndex(card => card.no === cardNo);
         const taskIndex = cards[cardIndex].tasks.findIndex(task => task.no === taskNo )
-        //console.log(cardIndex, taskIndex, done);
-        
+
         //cards[cardIndex].tasks[taskIndex].done = false;
         const newCards = update(cards, {
+            //변수인 경우 []로 감싸기
             [cardIndex]: {
                 tasks: {
                     [taskIndex]: {

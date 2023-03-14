@@ -1,5 +1,4 @@
-import fs, { stat } from 'fs';
-
+import fs from 'fs';
 let state = {
     order: JSON.parse(fs.readFileSync('./json/data.json', 'utf-8'))
 }
