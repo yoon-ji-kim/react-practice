@@ -15,4 +15,9 @@ state = {
     order: JSON.parse(fs.readFileSync('./json/data.json', 'utf-8'))
 }
 
-Object.assign({})
+const updateOrder2 = Object.assign({}, state.order, {
+    receive: '부산시 해운대구 우동....'
+});
+
+//false
+console.log(state.order, updateOrder2, state.order === updateOrder2);

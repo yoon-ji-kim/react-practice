@@ -40,10 +40,3 @@ $ npm i
 6. 테스트 서버 실행
     $ npm run debug src=(01|02|03|04)
 
-
-1,2 참고해서 3,4 clock 만들기
-3번은 class component
-4번은 functional component
-
-시간을 상태로 관리해서 1초마다 바껴야함 -> 매번 date 구해서 hours, minutes, seconds 구해서 저장
-04 - 챌린지 :10초 마다 unmount해서 clock 없어졌다가 나오게 --> tick
