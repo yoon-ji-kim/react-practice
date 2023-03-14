@@ -32,21 +32,21 @@ export default class Clock extends Component {
         return (
             <div className="clock-field">
                 <div>
-                    <p className="hours">{this.state.hours}</p>
+                    <p className="hours">{('0'+(this.state.hours > 12 ? this.state.hours-12 : this.state.hours)).slice(-2)}</p>
                     <p className="placeholder"></p>
                 </div>
                 <div className="colon">
                     <p>:</p>
                 </div>
                 <div className="numbers">
-                    <p>{this.state.minutes}</p>
+                    <p>{('0'+this.state.minutes).slice(-2)}</p>
                     <p className="placeholder"></p>
                 </div>
                 <div className="colon">
                     <p>:</p>
                 </div>
                 <div className="numbers">
-                    <p>{this.state.seconds}</p>
+                    <p>{('0'+this.state.seconds).slice(-2)}</p>
                     <p className="placeholder"></p>
                 </div>
                 <div className="AmPm">
