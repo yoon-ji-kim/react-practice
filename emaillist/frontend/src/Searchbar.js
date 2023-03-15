@@ -9,7 +9,9 @@ const Searchbar = ({callbackSearch}) => {
                     if(e.key ==='Enter'){
                         callbackSearch(e.target.value);
                     }
-            }}/>
+                }
+                //onChange={e => callbackSearch(e.target.value)
+            }/>
         </div>
     );
 };
