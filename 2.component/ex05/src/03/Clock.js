@@ -8,7 +8,7 @@ export default class Clock extends Component {
     }
     
     componentDidMount() {
-        this.timerId = setInterval(() => {
+        this.intervalId = setInterval(() => {
             let now = new Date(); 
             this.setState({
                 hours: now.getHours(),
@@ -20,7 +20,7 @@ export default class Clock extends Component {
     }
     
     componentWillUnmount() {
-        clearInterval(this.timerID);
+        clearInterval(this.intervalId);
     }
     
     render() {
