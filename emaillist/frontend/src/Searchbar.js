@@ -1,9 +1,15 @@
 import React from 'react';
 import styles from './assets/css/Searchbas.css';
-const Searchbar = ({callback}) => {
+const Searchbar = ({callbackSearch}) => {
     return (
         <div className={styles.Searchbar}>
-            <input type='text' placeholder='찾기' onChange={e => {callback(e.target.value)}}/>
+            <input type='text' 
+                placeholder='찾기' 
+                onKeyDown={(e) => {
+                    if(e.key ==='Enter'){
+                        callbackSearch(e.target.value);
+                    }
+            }}/>
         </div>
     );
 };
