@@ -9,6 +9,7 @@ const RegisterForm = ({callbackAddEmail}) => {
             lastName : e.target.lastName.value,
             email: e.target.email.value
         }
+        e.target.firstName.value = '', e.target.lastName.value = '', e.target.email.value ='';
         callbackAddEmail(newEmail);
     }
     return (

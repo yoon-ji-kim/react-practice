@@ -87,7 +87,7 @@ function App() {
             if(json.result !== 'success') {
                 throw new Error(`${json.result} ${json.message}`)
             }
-           const newEmails = emails.filter((email) => email.no !== no);
+           const newEmails = emails.filter((email) => email.no !== json.data);
            setEmails(newEmails);
         } catch(err){
             console.log(err.message);
