@@ -1,36 +1,46 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styles from './assets/css/KanbanBoard.css';
-import data from './assets/json/data.json';
 import CardList from './CardList';
-import update from 'react-addons-update';
 
 const KanbanBoard = () => {
-    const [cards, setCards] = useState(data);
+    const [cards, setCards] = useState([]);
 
-    const changeTaskDone = function(cardNo, taskNo, done) {
-        const cardIndex = cards.findIndex(card => card.no === cardNo);
-        const taskIndex = cards[cardIndex].tasks.findIndex(task => task.no === taskNo )
-
-        //cards[cardIndex].tasks[taskIndex].done = false;
-        const newCards = update(cards, {
-            //변수인 경우 []로 감싸기
-            [cardIndex]: {
-                tasks: {
-                    [taskIndex]: {
-                        done: {
-                            $set: done
-                        }
-                    }
+    //mount 됐을 때 실행되어야함
+    const fetchCards = async () => {
+        try {
+            const response = await fetch('/api/card', {
+            //Access-Control-Allow-Origin origin: http://localhost:8080 오리진이 달라서 오류 발생
+            // webpack에 proxy 설정해서 해결
+                //option , header정보
+                method : 'get',
+                headers: {
+                    'Accept': 'application/json',
                 }
+            });
+            if(!response.ok) { //200 아닐 경우 error
+                throw new Error(`${response.status} ${response.statusText}`);
             }
-        });
-        setCards(newCards);
+            //response body json으로 만들기  json(): 비동기함수라서 await 필요
+            const json = await response.json();
+            if(json.result !== 'success') { //success 아닐 경우 error
+                throw new Error(`${json.result} ${json.message}`)
+            }
+
+            setCards(json.data);
+        } catch (err) {
+            console.log(err.message);
+        }
     }
+
+    useEffect(() => {
+        fetchCards();
+    }, [])
+
     return (
         <div className={styles.KanbanBoard}>
-            <CardList key={'To Do'} title={'To Do'} cards={cards.filter(card => card.status === 'ToDo')} callback={changeTaskDone} />
-            <CardList key={'Doing'} title={'Doing'} cards={cards.filter(card => card.status === 'Doing')} callback={changeTaskDone} />
-            <CardList key={'Done'} title={'Done'} cards={cards.filter(card => card.status === 'Done')} callback={changeTaskDone} />
+            <CardList key={'To Do'} title={'To Do'} cards={cards.filter(card => card.status === 'ToDo')} />
+            <CardList key={'Doing'} title={'Doing'} cards={cards.filter(card => card.status === 'Doing')} />
+            <CardList key={'Done'} title={'Done'} cards={cards.filter(card => card.status === 'Done')} />
         </div>
     );
 };
