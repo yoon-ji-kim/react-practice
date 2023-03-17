@@ -72,7 +72,7 @@ spring:
       activate:
          on-profile: production
 
-# server
+# server(배포 포트)
 server:
    port: 8088
    servlet:
