@@ -17,7 +17,14 @@
 		# mv ~/.ssh/id_rsa.pub ~/.ssh/authorized_keys
 	4) 연결 테스트
 		# ssh -i mykey.pem root@192.168.10.123 (Linux)
-	5) jenkins
+	5) ssh 연결 환경(변수)설정
+		- ~/.ssh/environment	
+		===============
+		PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/usr/local/douzone2023/java/bin:/usr/local/douzone2023/git/bin:/usr/local/douzone2023/maven3.8/bin:/usr/local/douzone2023/mariadb/bin:/usr/local/douzone2023/python/bin:/usr/local/douzone2023/node/bin:/root/bin
+		===============
+		- etc/ssh/sshd_config 환경 변수 적용
+			PermitUserEnviroment yes
+	6) jenkins
 		- Publish over SSH Plug-in 설치
 		- Publish over SSH 플러그인 ssh server 등록
 			name: springboot-publish-server
