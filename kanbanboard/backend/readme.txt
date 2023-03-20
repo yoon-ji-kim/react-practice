@@ -24,6 +24,9 @@
 			hostname: 192.~~~
 		- 프로젝트의 빌드 후 조치(post-built action) 설정
 			프로젝트 빌드 후 조치의 send build artifacts over ssh 설정
+			kanbanboard.jar : transger 설정
+			launch.sh : transfer + execution
+				- resource plugin 설정필요
 		
 =================================================================
 2. frontend
